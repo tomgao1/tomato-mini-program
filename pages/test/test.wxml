@@ -1,0 +1,9 @@
+<!--pages/test/test.wxml-->
+<view class="sp">{{message}}</view>
+
+<view wx:if="{{condition}}">我是显示的</view>
+<view wx:else>我是不显示的</view>
+
+<view wx:for="{{array}}" wx:for-index="xx" wx:for-item="itemName" wx:key="id">
+  {{xx}}我是ID:{{itemName.id}}我的名字是: {{itemName.message}}
+</view>

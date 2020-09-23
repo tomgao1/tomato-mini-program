@@ -1,0 +1,16 @@
+<!--pages/home/home.wxml-->
+<view class="home-container">
+  <scroll-view class="todoList" scroll-y="true">
+    <view class="item" wx:for="{{lists}}" wx:key="item.id">
+      <view class="select"></view>
+      <text>{{item.text}}</text>
+    </view>
+  </scroll-view>
+  <t-button type="change" class="createButton" bindtap='showConfirm'>创建任务</t-button>
+  <view class="tomato-wrapper">
+    <view class="tomato">
+     <t-clock text="点击开始闹钟"></t-clock>
+    </view>
+  </view>
+  <t-confirm placeholder="我完成了什么" bincconfirm="confirmCreate" bindcancel="hideConfirm" visible="{{visivleConfirm}}"></t-confirm>
+</view>
